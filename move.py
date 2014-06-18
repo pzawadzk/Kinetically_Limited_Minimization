@@ -7,7 +7,6 @@ from str_util import *
 import void
 
 def move_atom(structure, move_type = 'hop', seed=0, **kwargs):
-
     np.random.seed(seed)
     random.seed(seed)
 

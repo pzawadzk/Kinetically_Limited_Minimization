@@ -7,10 +7,12 @@ from str_util import *
 from time import time
 
 def  calc_Dx(point, structure):
+  '''Calculates the distnace to the nearest atom'''
   neighs = [n for n in neighbors(structure, 3, point)]
   return - neighs[0][2]
 
 def  get_rnd_void_center(structure, seed):
+    '''Finds a random void center'''
     seed = int(1000*time())*seed
     np.random.seed(seed)
     v = np.random.random(3)
@@ -26,6 +28,7 @@ def  get_rnd_void_center(structure, seed):
     return void_center, void_value
 
 def  get_void_centers(structure, mesh_width=2.0):
+    '''Finds all void centers on a grid'''
     abc = [ v for v in structure.cell]
     ds  = [np.dot(v, v)**0.5 for v in abc]
     mesh_nbins  =  [int(d * structure.scale / mesh_width) for d in ds]
@@ -67,6 +70,7 @@ def  get_void_centers(structure, mesh_width=2.0):
     return zipped_voids
 
 def analyze_voids(zipped_voids, structure):
+    ''' Analysis voids'''
     centers = []
     for value, point in zipped_voids:
       print '######', value*structure.scale
