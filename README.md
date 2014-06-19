@@ -1,8 +1,9 @@
-#Pylada Functional: Kinetically Limited mimization
+#Pylada Functional: Kinetically Limited minimization
 
-### Example (a-In2O3-SnO2):
+### Usage:
 
 import test
 
 test.savejob('job_name', 'input_bulk.py')
 
+## 'input_bulk.py' calculates amorphous structures of In2O3-SnO2 pseudo-binary mixture:
