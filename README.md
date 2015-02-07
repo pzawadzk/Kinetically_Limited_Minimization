@@ -3,21 +3,21 @@
 ### Usage:
 
 ```python
-import test
+import save_job
 
-test.savejob('job_name', 'input_bulk.py')
+save_job.savejob('job_name', 'input_klm.py')
 ```
 
-`input_bulk.py` calculates amorphous structures of In2O3-SnO2 pseudo-binary mixture.
+`input_klm.py` calculates amorphous structures of In2O3-SnO2 pseudo-binary mixture.
 
 ##Pylada Functional: Simulated Annealing
 
 ### Usage:
 
 ```
-import test
+import save_job
 
-test.savejob('job_name', 'input_izo.py')
+save_job.savejob('job_name', 'input_sa.py')
 ```
 
-`input_izo.py` calculates amorphous structures of In2O3-ZnO pseudo-binary mixture.
+`input_sa.py` calculates amorphous structures of In2O3-ZnO pseudo-binary mixture.
